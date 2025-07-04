@@ -1,1 +1,2 @@
-1
+This folder contains assets
+
