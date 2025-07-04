@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    /* font-family: martel sans; */
+}
+
+body {
+    background-color: black;
+    /* font-family: "Martel Sans"; */
+
+}
+@media (min-width:1950px) {
+    .main, .trending, .border-box{
+        max-width: 1950px;
+        margin: auto;
+    }
+}
+
+
+.main {
+    background-image: url(assets/background_image.jpg);
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    /* border-bottom: 5px solid gray; */
+    width: 100vw;
+    overflow: hidden;
+}
+
+
+.box {
+    height: 90vh;
+    width: 100vw;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    background-color: black;
+}
+
+.curve .border-box {
+    height: 100px;
+    width: 100vw;
+    background: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;
+    border: 3px solid ;
+    /* border-image: linear-gradient(to right, rgba(33, 13, 22, 1) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 1) 84%); */
+    border-image-slice: 1;
+    border-bottom: none;
+    position: relative;
+    top: 2px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+.curve{
+    height: 100px;
+    width: 100vw;
+    background: linear-gradient(to right, rgba(33, 13, 22, 1) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 1) 84%);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom: none;
+    position: relative;
+    top: -35px;
+}
+
+.main .nav {
+    max-width: 82vw;
+    margin: auto;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main .nav .icon img {
+    height: 32px;
+    position: relative;
+    z-index: 10;
+}
+
+.main .nav .button button {
+    padding: 4px 10px 4px 10px;
+    margin: 3px;
+    color: white;
+    border: none;
+    position: relative;
+    z-index: 10;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.main .nav .button .lang {
+    background-color: transparent;
+    border: 0.01px solid rgba(255, 255, 255, 0.322);
+    border-radius: 2px;
+
+}
+
+.main .nav .button .sign {
+    background-color: red;
+    border-radius: 3px;
+    padding: 6px 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.main .nav .button .sign:hover {
+    background-color: rgb(199, 2, 2);
+}
+
+.main .content .head {
+    color: white;
+    /* position: relative; */
+    /* z-index: 10; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    /* top: 150px; */
+    /* height: 100%; */
+    /* font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif; */
+}
+
+.main .content .head h1 {
+    font-weight: 800;
+    font-size: 45px;
+}
+
+.main .content .head .para1 {
+    font-weight: 500;
+}
+
+.main .content .head .para2 {
+    font-size: small;
+    padding-top: 10px;
+}
+
+.main .content {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    top: 167px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.main .content .input_box {
+    background-color: rgba(24, 24, 24, 0.835);
+    padding: 15px 100px 15px 15px;
+    border: 0.01px solid rgba(255, 255, 255, 0.348);
+    border-radius: 3px;
+    margin-top: 15px;
+    color: white;
+    /* font-weight: 700; */
+}
+
+.main .content .input_box::placeholder {
+    color: rgba(255, 255, 255, 0.623);
+    font-size: small;
+}
+
+.main .content .search button {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 11px 12px 15px 12px;
+    width: 160px;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: large;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+}
+
+.main .content .search button:hover {
+    background-color: rgb(199, 2, 2);
+}
+
+/* middle section */
+
+.trending .top {
+    color: white;
+    /* padding: 20px 0 15px 100px; */
+    font-size: large;
+    font-weight: 600;
+}
+
+.trending {
+    width: 85vw;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.trending .movies ul li {
+    list-style: none;
+    /* border: 2px solid white; */
+    height: 200px;
+    min-width: 145px;
+    -webkit-text-stroke: 0.1rem rgb(188, 188, 188);
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    /* margin: 10px; */
+
+}
+
+.trending .movies ul li:hover {
+    transform: scale(1.07);
+}
+
+.trending .movies ul {
+    height: 220px;
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    /* border: 2px solid red; */
+    overflow-x: scroll;
+    align-items: center;
+    gap: 25px;
+    scrollbar-width: none;
+}
+
+.trending .movies button {
+    color: rgb(157, 156, 156);
+    background-color: rgb(29, 29, 29);
+    height: 80px;
+    width: 20px;
+    border-radius: 8px;
+    border: none;
+}
+
+.trending .movies button:hover {
+    background-color: rgb(53, 53, 53);
+}
+
+/* to align button with trending section */
+.trending .movies {
+    display: flex;
+    width: 80vw;
+    margin: auto;
+    align-items: center;
+}
+
+.trending .movies ul li p {
+    color: black;
+    font-size: 100px;
+    font-weight: 800;
+    margin: 70px 0px 0px -25px;
+}
+
+.trending .movies ul li:nth-child(1) {
+    background-image: url(assets/img_1.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+}
+
+.trending .movies ul li:nth-child(2) {
+    background-image: url(assets/img_2.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+}
+
+.trending .movies ul li:nth-child(3) {
+    background-image: url(assets/img_3.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+}
+
+.trending .movies ul li:nth-child(4) {
+    background-image: url(assets/img_4.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+}
+
+.trending .movies ul li:nth-child(5) {
+    background-image: url(assets/img_5.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+}
+
+.trending .movies ul li:nth-child(6) {
+    background-image: url(assets/img_6.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+}
+
+.trending .movies ul li:nth-child(7) {
+    background-image: url(assets/img_7.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+}
+
+.trending .movies ul li:nth-child(8) {
+    background-image: url(assets/img_8.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+}
+
+.trending .movies ul li:nth-child(9) {
+    background-image: url(assets/img_9.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+}
+
+.trending .movies ul li:nth-child(10) {
+    background-image: url(assets/img_10.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+    margin-left: 10px;
+}
+
+.more .head {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.more {
+    width: 80vw;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.more .info ul li {
+    /* background-color: pink; */
+    background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+    height: 200px;
+    /* min-width:250px; */
+    width: 250px;
+    overflow: hidden;
+    list-style: none;
+    border-radius: 20px;
+    padding: 10px;
+}
+@media (max-width:690px){
+    .more .info ul li{
+        width: 100vw;
+    }
+}
+
+.more .info ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    /* flex-wrap: wrap; */
+}
+@media (max-width:1020px) {
+    .more .info ul{
+        flex-wrap: wrap;
+    }
+}
+
+.more .info ul li h3 {
+    color: white;
+    padding: 10px;
+}
+
+.more .info ul li p {
+    color: rgb(174, 174, 174);
+    font-size: smaller;
+    padding: 10px;
+}
+
+/* faq */
+
+.faq .head-3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.faq {
+    width: 80vw;
+    margin: auto;
+    padding-top: 30px;
+}
+
+.faq ul li {
+    color: white;
+    width: 100%;
+    height: 65px;
+    background-color: rgb(45, 45, 45);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px;
+    font-size: 20px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.68, 0.06);
+    ;
+}
+
+.faq ul li:hover {
+    background-color: rgb(66, 66, 66);
+}
+
+.faq ul {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.head-last .input_box {
+    background-color: rgba(24, 24, 24, 0.835);
+    padding: 15px 200px 15px 15px;
+    border: 0.01px solid rgba(255, 255, 255, 0.348);
+    border-radius: 3px;
+    margin-top: 15px;
+    color: white;
+    width: 250px;
+    /* font-weight: 700; */
+}
+
+.head-last .input_box::placeholder {
+    color: rgba(255, 255, 255, 0.623);
+    font-size: small;
+}
+
+.head-last .search button {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 11px 12px 15px 12px;
+    width: 160px;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: large;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+}
+
+.head-last .search button:hover {
+    background-color: rgb(199, 2, 2);
+}
+
+.head-last {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    margin: auto;
+    padding-top: 60px;
+}
+
+.head-last p {
+    color: white;
+    font-size: smaller;
+}
+/* Footer */
+
+footer .head-last .foot{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 80vw;
+    margin: auto;
+}
+footer .head-last .foot li a{
+    color: rgb(160, 160, 160);
+    font-size: small;
+}
+footer .head-last .foot li{
+    list-style: none;
+    margin: 10px;
+    padding-right: 120px;
+}
+.head-last .bottom{
+    color: rgb(164, 164, 164);
+    padding: 20px;
+    position: relative;
+    width: 80vw;
+    font-size: small;
+}
+.head-last .last button{
+    background-color: transparent;
+    border: 0.01px solid rgba(255, 255, 255, 0.322);
+    border-radius: 2px;
+    color: white;
+    padding: 5px;
+    margin-top: 20px;
+}
+.head-last .last p{
+    color: rgb(124, 124, 124);
+    padding: 10px;
+    margin: 10px;
+    font-size: small;
+}
+.head-last .last{
+    width: 80vw;
+}
+
